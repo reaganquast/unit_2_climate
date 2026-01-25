@@ -1,6 +1,8 @@
 ---
 title: "2.2: Boolean logic"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}

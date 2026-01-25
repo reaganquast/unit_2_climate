@@ -1,6 +1,8 @@
 ---
 title: "2.5: For loops"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}

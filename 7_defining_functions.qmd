@@ -1,6 +1,8 @@
 ---
 title: "2.7 Defining functions"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}

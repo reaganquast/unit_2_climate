@@ -1,6 +1,8 @@
 ---
 title: "2.8 Global temperature"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}

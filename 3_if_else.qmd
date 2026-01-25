@@ -1,6 +1,8 @@
 ---
 title: "2.3: Conditional Statements"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}

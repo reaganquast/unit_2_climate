@@ -1,6 +1,8 @@
 ---
 title: "2.4: CO2 Trends"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}
