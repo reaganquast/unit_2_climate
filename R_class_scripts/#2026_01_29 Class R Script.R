@@ -38,3 +38,77 @@ world_oceans$ocean[world_oceans$avg_depth_m > 4000] #this one only asks for you 
 #when you use boolean operators, you need to repeat your question, kind of. example below
     x > 2 & x < 9
     x > 2 & < 9 #this doesn't work! computer gets confused
+
+x > 5 | x %in% c(1, 2, 3)
+
+vec1 = c(1,2,3)
+vec2 = c(3,2,1)
+vec1 == vec2
+
+world_oceans[ world_oceans$avg_depth_m > 4000 & world_oceans$area_km2 > 100e6, ]
+#stringing multiple conditionals together when subsetting data
+
+#what about NAs?
+vec2 = c(1, 2, NA, 4)
+2 %in% vec2
+NA %in% vec2
+x = NA
+y = NA
+y == x
+# sometimes NAs dont work well logically
+    #instead of saying TRUE for y == x, it gives you NA
+#is.na is specifically used to evaluate NAs
+is.na(vec2)
+sum( is.na(vec2))
+#assumes false is a 0 and true is a 1
+    #with this you can ask how many NAs are in your data
+#do exercise 2.2 at home
+
+
+#Lec 3 - conditional statements
+#if this is true, do all of this
+#test if else statements
+
+num = -2
+if(num<0){
+    num=num * -1
+    print("I made num positive")
+}
+num
+
+#exercise3.1
+temp = 105
+
+ if(temp>99){
+  print("you have a fever")
+  diff = temp - 98.6
+  print(diff)
+  if(temp>101){
+    print("WARNING - FEVER REAL")
+  }}
+
+#else statements
+    #if this is true, do this. if it ISNT true, then just do this
+a = 50
+b = 75
+
+if(a>b){
+    print("a wins!")
+} else{
+    print("b wins!")
+}
+
+#more than two cases
+a = 1
+b = 1
+if (a>b){
+  print("a wins!")
+} else if(a<b) {
+  print("b wins!")
+} else {
+  print("tie.....")
+}
+
+#condensing if/else into a single line of code
+    #use ifelse
+
