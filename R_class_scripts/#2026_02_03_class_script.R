@@ -86,7 +86,16 @@ n_my_vector = length(my_vector)
 my_vector_squared = rep(NA, length(my_vector)) #more efficient
 
 for (i in seq(n_my_vector)){
+  print( paste ("im on iteration; ", i))
   my_vector_squared[i] = my_vector[i]^2
+  print(paste("my answer is; ", my_vector_squared[i]))
+} #this holds your hand and tells you which vector you're on
 
+#calculate total of a vector
+my_vector = c(1, 3, 5, 2, 4)
+n_my_vector = length(my_vector)
+my_vector_total = 0
+for(i in seq(n_my_vector)){
+    print(my_vector_total)
+    my_vector_total = my_vector_total + my_vector[i]
 }
-my_vector_squared
