@@ -99,3 +99,22 @@ for(i in seq(n_my_vector)){
     print(my_vector_total)
     my_vector_total = my_vector_total + my_vector[i]
 }
+#make sure you rerun the initialization that sets the number as 0
+#put the initialization right above the loop, and it should be an INSTINCT, to highlight it with the for loop code
+
+#exercise 5.1
+my_integer = 7
+my_integer_factorial = 1
+for(i in seq(my_integer)){
+    print(my_integer_factorial)
+    my_integer_factorial = my_integer_factorial* my_integer[i]
+}
+7*6*5*4*3*2*1
+
+#that attempt sucks... heres a class coding
+num = 7
+factorial_result = 1
+for(i in seq(num)){
+    factorial_result = i * factorial_result
+    print(factorial_result)
+}
