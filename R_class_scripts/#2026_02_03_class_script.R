@@ -118,3 +118,57 @@ for(i in seq(num)){
     factorial_result = i * factorial_result
     print(factorial_result)
 }
+
+#nesting for loops
+
+mat = matrix(c(2,0,8,3,5,-4), nrow=2, ncol=3)
+mat
+
+mat_squared = matrix(rep(NA, 6), nrow=2, ncol=3)
+
+dim(mat) #use this in sequence - even if your data changes size, the loop still works
+
+for(i in seq(dim(mat)[1])){
+  for(j in seq(dim(mat)[2])){
+    print(paste("im on row: ", i, " and column: ", j))
+    mat_squared [i,j] = mat[i,j]^2
+  }
+}
+#name the itterand in the second loop something else! otherwise it gets confused
+#the first for loop, using [1] is discussing rows (first dimension)
+#second nested loop uses [2] because it is the second dimension (columns)
+
+mat_squared
+#look at the print(paste). the computer goes through the first value of i, 
+#and then go through all the columns under that first row
+#Then, once there are no more "j"'s, it goes back to i to see if there are
+#any more options for that 
+
+#WHILE LOOPS (used a lot for programmers, but not really for data scientists)
+  #use when you don't know how many time's youll repeat the task
+
+#while (some condition is true){
+#do this code
+#}
+#if the condition turns false, it will exit the code
+
+x = 1
+while (x>0){
+  x = x+1
+}
+#this is an infinite loop. use ctrl + c to escape!!! or press the red button
+
+x = 5
+while(x > 0){
+  x = x - 1
+}
+
+#fish catching game
+total_catch_lb = 0
+n_fish = 0
+while(total_catch_lb < 50){ 
+  new_fish_weight = rnorm(n = 1, mean = 2, sd = 1)#r stands for random, norm stands for normal distribution
+  total_catch_lb = total_catch_lb + new_fish_weight
+  n_fish = n_fish + 1
+  print(paste("n fish = ", n_fish, "and new fish weight = ", new_fish_weight))
+}
